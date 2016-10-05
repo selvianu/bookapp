@@ -1,15 +1,24 @@
 package dao;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.util.List;
 
+import util.ConnectionUtil;
 import model.Book;
 
 public class BookDAOImpl implements BookDAO {
 
 	@Override
-	public void insert(Book b) {
-		// TODO Auto-generated method stub
-
+	public void insert(Book b) throws Exception {
+		Connection con = ConnectionUtil.getConnection();
+		String query = "INSERT INTO books (NAME,cost,publication) VALUES(?,?,?)";
+		PreparedStatement p = con.prepareStatement(query);
+		p.setString(1, b.getName());
+		p.setInt(2, b.getCost());
+		p.setString(3, b.getPublication());
+		int rows = p.executeUpdate();
+		System.out.println("no of rows inserted" + rows);
 	}
 
 	@Override

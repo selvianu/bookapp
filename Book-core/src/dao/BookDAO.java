@@ -5,7 +5,7 @@ import java.util.List;
 import model.Book;
 
 public interface BookDAO {
-	void insert(Book b);
+	void insert(Book b) throws Exception;
 
 	void update(Book b);
 
