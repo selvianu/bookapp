@@ -1,4 +1,4 @@
-package test.code;
+package test.dao;
 
 import model.Book;
 import dao.BookDAOImpl;
