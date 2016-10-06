@@ -1,14 +1,14 @@
 package model;
 
 public class Book {
-	private Long id;
+	private long id;
 	private String name;
 	private Integer cost;
 	private String publication;
-	public Long getId() {
+	public long getId() {
 		return id;
 	}
-	public void setId(Long id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 	public String getName() {

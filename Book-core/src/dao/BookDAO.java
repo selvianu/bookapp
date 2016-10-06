@@ -9,11 +9,11 @@ public interface BookDAO {
 
 	void update(Book b)throws Exception;
 
-	void delete(Long id);
+	void delete(Book b) throws Exception;
 
-	List<Book> findByName(String name);
+	List<Book> findByName(String name) throws Exception;
 
-	List<Book> list();
+	List<Book> list() throws Exception;
 
-	Book show(Long id);
+	Book show(Long id) throws Exception;
 }
