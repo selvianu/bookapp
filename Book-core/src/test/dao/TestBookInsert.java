@@ -15,5 +15,5 @@ public class TestBookInsert {
 		BookDAOImpl bd = new BookDAOImpl();
 		bd.insert(b);
 	}
-
+  
 }

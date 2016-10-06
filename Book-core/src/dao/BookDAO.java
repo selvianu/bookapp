@@ -7,7 +7,7 @@ import model.Book;
 public interface BookDAO {
 	void insert(Book b) throws Exception;
 
-	void update(Book b);
+	void update(Book b)throws Exception;
 
 	void delete(Long id);
 

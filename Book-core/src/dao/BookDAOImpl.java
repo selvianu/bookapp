@@ -22,9 +22,14 @@ public class BookDAOImpl implements BookDAO {
 	}
 
 	@Override
-	public void update(Book b) {
-		// TODO Auto-generated method stub
-
+	public void update(Book b) throws Exception {
+		Connection con = ConnectionUtil.getConnection();
+		String query = "UPDATE books SET NAME=? WHERE id=?";
+		PreparedStatement p = con.prepareStatement(query);
+		p.setString(1, b.getName());
+		p.setLong(2, b.getId());
+		int rows = p.executeUpdate();
+		System.out.println(rows);
 	}
 
 	@Override
